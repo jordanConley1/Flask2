@@ -15,3 +15,7 @@ def about():
 @app.route('/capitalize/<word>/')
 def capitalize(word):
     return '<h1>{}</h1>'.format(escape(word.capitalize()))
+
+@app.route('/myname/<word>/<word1>/<word2>')
+def myname(word,word1,word2):
+    return '<h1>{}</h1>'.format(escape(word.capitalize())+' '+escape(word1.capitalize())+' '+escape(word2.capitalize()))
